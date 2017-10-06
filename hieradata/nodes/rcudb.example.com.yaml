@@ -1,0 +1,18 @@
+---
+
+role: role::db::rcudb
+
+profile::db::software::version:                     12.2.0.1
+profile::db::software::file_name:                   linuxx64_12201_database
+profile::db::software::type:                        EE
+ora_install::database::version:                      "%{lookup('profile::ora::software::version')}"
+profile::db::dbname:                                RCUDB
+profile::db::home:                                  "%{lookup('profile::db::base')}/rcudb"
+
+profile::db::rcudb::tablespaces::tablespace_name:   rcudb_ts
+
+profile::db::base:                                  /opt/oracle
+profile::db::os_user:                               oracle
+profile::db::os_group:                              oinstall
+profile::db::system_password:                       welcome01!
+profile::db::sys_password:                          welcome01!

@@ -1,0 +1,28 @@
+---
+
+role: role::wls::osb_master
+
+profile::wls::osb::domain::servers:
+  osb1:
+    machine_name:    osb_machine_1
+    listenaddress:   osb1.example.com
+    listen_port:     7005
+    ssl_listen_port: 7006
+  osb2:
+    machine_name:    osb_machine_2
+    listenaddress:   osb2.example.com
+    listen_port:     7005
+    ssl_listen_port: 7006
+
+profile::wls::osb::domain::admin_server_arguments:
+  - '-XX:PermSize=64m'
+  - '-Xms768m'
+  - '-Xmx768m'
+
+profile::wls::osb::domain::repository_database_url:  'jdbc:oracle:thin:@rcudb.example.com:1521/rcudb' #/rcudb.example.com'
+profile::wls::osb::domain::rcu_database_url:         'rcudb.example.com:1521:rcudb.example.com'
+profile::wls::osb::domain::repository_prefix:         OSB55
+profile::wls::osb::domain::repository_password:       'welcome01'
+profile::wls::osb::domain::repository_sys_password:   'welcome01!'
+profile::wls::osb::domain::rcu_soa_profile:           MED
+profile::wls::osb::domain::rcu_honor_omf:             true
