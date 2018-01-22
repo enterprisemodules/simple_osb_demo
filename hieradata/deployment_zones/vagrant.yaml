@@ -1,3 +1,4 @@
+---
 profile::base::hosts::list:
   wlsmaster.example.com:
     ip: 192.168.253.10
@@ -5,11 +6,11 @@ profile::base::hosts::list:
       - wlsmaster
       - puppet
   osb1.example.com:
-    ip: 10.10.10.30
+    ip: 10.10.10.40
     host_aliases:
       - osb1
   osb2.example.com:
-    ip: 10.10.10.31
+    ip: 10.10.10.41
     host_aliases:
       - osb2
   rcudb.example.com:

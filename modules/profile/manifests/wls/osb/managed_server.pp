@@ -26,7 +26,7 @@ class profile::wls::osb::managed_server(
     os_group            => $profile::wls::os_user,
     download_dir        => $profile::wls::domains_dir,
     log_dir             => $wls_log_dir,
-    log_output          => true,
+    logoutput           => true,
     use_ssh             => true,
     domain_pack_dir     => $profile::wls::domains_dire,
     adminserver_address => $profile::wls::adminserver_address,

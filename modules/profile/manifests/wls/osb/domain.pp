@@ -109,7 +109,7 @@ class profile::wls::osb::domain(
     rcu_honor_omf                        => $rcu_honor_omf,
     rcu_soa_profile                      => $rcu_soa_profile,
     log_dir                              => $wls_log_dir,
-    log_output                           => false,  # When debugging, set this to true
+    logoutput                            => false,  # When debugging, set this to true
   }
 
   #
@@ -224,7 +224,7 @@ class profile::wls::osb::domain(
     osb_enabled         => $osb_enabled,
     b2b_enabled         => $b2b_enabled,
     ess_enabled         => $ess_enabled,
-    log_output          => false,  # When debugging, set this to true
+    logoutput           => false,  # When debugging, set this to true
   }
 
   -> wls_install::fmwlogdir{'AdminServer':
@@ -246,7 +246,7 @@ class profile::wls::osb::domain(
   #
   # This definition creates a pack of the domain for distrobution to managed servers on other machines
   #
-  ->wls_install::packdomain{$domain_name:
+  -> wls_install::packdomain{$domain_name:
     weblogic_home_dir   => $profile::wls::weblogic_home_dir,
     middleware_home_dir => $profile::wls::middleware_home_dir,
     jdk_home_dir        => $profile::wls::jdk_home_dir,
@@ -257,7 +257,7 @@ class profile::wls::osb::domain(
     download_dir        => $profile::wls::domains_dir,
   }
 
-  ->file {"/vagrant/domain_${domain_name}.jar":
+  -> file {"/vagrant/domain_${domain_name}.jar":
     ensure => 'present',
     source => "${profile::wls::domains_dir}/domain_${domain_name}.jar"
   }
@@ -265,12 +265,12 @@ class profile::wls::osb::domain(
   #
   # This class create's a startup script in /etc/init.d.
   #
-  ->wls_install::support::nodemanagerautostart{"${domain_name}_nodemanager":
-    version                 => $profile::wls::version,
-    wl_home                 => $profile::wls::weblogic_home_dir,
-    user                    => $profile::wls::os_user,
-    domain                  => $domain_name,
-    log_dir                 => $wls_log_dir,
-    domain_path             => "${profile::wls::domains_dir}/${domain_name}",
+  -> wls_install::support::nodemanagerautostart{"${domain_name}_nodemanager":
+    version     => $profile::wls::version,
+    wl_home     => $profile::wls::weblogic_home_dir,
+    user        => $profile::wls::os_user,
+    domain      => $domain_name,
+    log_dir     => $wls_log_dir,
+    domain_path => "${profile::wls::domains_dir}/${domain_name}",
   }
 }

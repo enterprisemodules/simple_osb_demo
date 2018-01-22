@@ -11,8 +11,7 @@ class profile::wls::fmw_software(
     fmw_file1   => $filename,
     fmw_product => $product,
     bpm         => $bpm,
-    remote_file => true,
     source      => 'puppet:///modules/software',
-    log_output  => false,
+    logoutput   => true,
   }
 }

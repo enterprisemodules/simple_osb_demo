@@ -2,6 +2,7 @@ software/
 .vagrant
 .tmp
 .librarian
+modules/augeasproviders*
 modules/concat/
 modules/connect/
 modules/easy_type/

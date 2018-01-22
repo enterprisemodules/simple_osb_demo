@@ -10,6 +10,7 @@ class profile::wls(
   String  $jdk_home_dir          = lookup('wls_jdk_home_dir'),
   Integer $version               = lookup('wls_version'),
   String  $domains_dir           = lookup('wls_domains_dir'),
+  String  $apps_dir              = lookup('wls_apps_dir'),
   String  $weblogic_user         = lookup('wls_weblogic_user'),
   String  $weblogic_password     = lookup('domain_wls_password'),
   String  $nodemanager_username  = lookup('domain_nodemgr_username'),
