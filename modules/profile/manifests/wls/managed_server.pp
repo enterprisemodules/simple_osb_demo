@@ -39,9 +39,11 @@ define profile::wls::managed_server(
     *                              => $profile::wls::managed_server_defaults
   }
 
-  ->wls_install::fmwlogdir{$title:
-    server  => $title,
-    log_dir => $wls_log_dir,
+  if ( $listenaddress == $::fqdn ) {
+    wls_install::fmwlogdir{$title:
+      server  => $title,
+      log_dir => $wls_log_dir,
+    }
   }
 
 }
