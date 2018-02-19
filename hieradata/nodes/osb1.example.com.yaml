@@ -21,7 +21,7 @@ profile::wls::osb::domain::admin_server_arguments:
 
 profile::wls::osb::domain::repository_database_url:  'jdbc:oracle:thin:@//rcudb.example.com:1521/RCUDB'
 profile::wls::osb::domain::rcu_database_url:         'rcudb.example.com:1521:RCUDB'
-profile::wls::osb::domain::repository_prefix:         OSB3
+profile::wls::osb::domain::repository_prefix:         OSB4
 profile::wls::osb::domain::repository_password:       'welcome01'
 profile::wls::osb::domain::repository_sys_password:   'welcome01!'
 profile::wls::osb::domain::rcu_soa_profile:           MED
