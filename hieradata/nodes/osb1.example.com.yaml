@@ -19,9 +19,9 @@ profile::wls::osb::domain::admin_server_arguments:
   - '-Xms768m'
   - '-Xmx768m'
 
-profile::wls::osb::domain::repository_database_url:  'jdbc:oracle:thin:@rcudb.example.com:1521/rcudb' #/rcudb.example.com'
-profile::wls::osb::domain::rcu_database_url:         'rcudb.example.com:1521:rcudb.example.com'
-profile::wls::osb::domain::repository_prefix:         OSB55
+profile::wls::osb::domain::repository_database_url:  'jdbc:oracle:thin:@//rcudb.example.com:1521/RCUDB' #/rcudb.example.com'
+profile::wls::osb::domain::rcu_database_url:         'rcudb.example.com:1521:RCUDB'
+profile::wls::osb::domain::repository_prefix:         OSB1
 profile::wls::osb::domain::repository_password:       'welcome01'
 profile::wls::osb::domain::repository_sys_password:   'welcome01!'
 profile::wls::osb::domain::rcu_soa_profile:           MED
