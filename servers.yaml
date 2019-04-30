@@ -4,29 +4,129 @@ pe-wlsmaster:
   cpucount:         2
   ram:              3072
   type:             pe-master
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+
 ml-rcudb:
   public_ip:        '10.10.10.20'
   cpucount:         2
   type:             masterless
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  # The installer needs to be unpacked in the ./modules/software/files/
+  # directory.
+  puppet_installer: puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+  software_files:
+    - fmw_12.2.1.2.0_infrastructure.jar
+    - fmw_12.2.1.2.0_osb.jar.zip
+    ### Java
+    - jdk-8u141-linux-x64.tar.gz
+    - jce_policy-8.zip
+  additional_hosts: |
+    192.168.253.10 wlsmaster.example.com puppet wlsmaster
+
 ml-osb1:
   public_ip:        '10.10.10.40'
   cpucount:         4
   ram:              8192
   type:             masterless
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  # The installer needs to be unpacked in the ./modules/software/files/
+  # directory.
+  puppet_installer: puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+  software_files:
+    - fmw_12.2.1.2.0_infrastructure.jar
+    - fmw_12.2.1.2.0_osb.jar.zip
+    ### Java
+    - jdk-8u141-linux-x64.tar.gz
+    - jce_policy-8.zip
+  additional_hosts: |
+    192.168.253.10 wlsmaster.example.com puppet wlsmaster
+
 pe-osb1:
   public_ip:        '10.10.10.40'
   cpucount:         4
   ram:              8192
   type:             pe-agent
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  # The installer needs to be unpacked in the ./modules/software/files/
+  # directory.
+  puppet_installer: puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+  software_files:
+    - fmw_12.2.1.2.0_infrastructure.jar
+    - fmw_12.2.1.2.0_osb.jar.zip
+    ### Java
+    - jdk-8u141-linux-x64.tar.gz
+    - jce_policy-8.zip
+  additional_hosts: |
+    192.168.253.10 wlsmaster.example.com puppet wlsmaster
+
 ml-osb2:
   public_ip:        '10.10.10.41'
   cpucount:         2
   type:             masterless
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  # The installer needs to be unpacked in the ./modules/software/files/
+  # directory.
+  puppet_installer: puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+  software_files:
+    - fmw_12.2.1.2.0_infrastructure.jar
+    - fmw_12.2.1.2.0_osb.jar.zip
+    ### Java
+    - jdk-8u141-linux-x64.tar.gz
+    - jce_policy-8.zip
+  additional_hosts: |
+    192.168.253.10 wlsmaster.example.com puppet wlsmaster
+
 pe-osb2:
   public_ip:        '10.10.10.41'
   cpucount:         2
   type:             pe-agent
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  # The installer needs to be unpacked in the ./modules/software/files/
+  # directory.
+  puppet_installer: puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+  software_files:
+    - fmw_12.2.1.2.0_infrastructure.jar
+    - fmw_12.2.1.2.0_osb.jar.zip
+    ### Java
+    - jdk-8u141-linux-x64.tar.gz
+    - jce_policy-8.zip
+  additional_hosts: |
+    192.168.253.10 wlsmaster.example.com puppet wlsmaster
+
 pe-rcudb:
   public_ip:        '10.10.10.20'
   cpucount:         2
   type:             pe-agent
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  # The installer needs to be unpacked in the ./modules/software/files/
+  # directory.
+  puppet_installer: puppet-enterprise-2017.2.3-el-7-x86_64/puppet-enterprise-installer
+  virtualboxorafix: true
+  required_plugins:
+    - vagrant-triggers
+  software_files:
+    - fmw_12.2.1.2.0_infrastructure.jar
+    - fmw_12.2.1.2.0_osb.jar.zip
+    ### Java
+    - jdk-8u141-linux-x64.tar.gz
+    - jce_policy-8.zip
+  additional_hosts: |
+    192.168.253.10 wlsmaster.example.com puppet wlsmaster
