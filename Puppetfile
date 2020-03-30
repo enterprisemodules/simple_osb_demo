@@ -11,7 +11,7 @@ mod 'herculesteam-augeasproviders_sysctl', '2.2.0'
 mod 'biemond-jdk7'
 mod 'fiddyspence-sleep'
 mod 'bashtoni-timezone'
-
+mod 'puppetlabs-inifile'
 #
 # The Enterprise Modules Oracle specific Modules
 #

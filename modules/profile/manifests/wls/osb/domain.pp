@@ -14,19 +14,19 @@
 # @param  repository_sys_password [String] The sys password of the database.
 #
 class profile::wls::osb::domain(
-  String  $domain_name,
-  Hash    $servers,
-  String  $cluster_name,
-  String  $repository_database_url,
-  String  $rcu_database_url,
-  String  $repository_prefix,
-  String  $repository_password,
-  String  $repository_sys_password,
-  String  $rcu_soa_profile,
-  Boolean $rcu_honor_omf,
-  String  $domain_wls_password        = lookup('domain_wls_password', String),
-  String  $domain_nodemgr_username    = lookup('domain_nodemgr_username', String),
-  String  $domain_nodemgr_password    = lookup('domain_nodemgr_password', String),
+  String    $domain_name,
+  Hash      $servers,
+  String    $cluster_name,
+  String    $repository_database_url,
+  String    $rcu_database_url,
+  String    $repository_prefix,
+  Sensitive $repository_password,
+  Sensitive $repository_sys_password,
+  String    $rcu_soa_profile,
+  Boolean   $rcu_honor_omf,
+  Sensitive $domain_wls_password        = lookup('domain_wls_password', Sensitive),
+  String    $domain_nodemgr_username    = lookup('domain_nodemgr_username', String),
+  Sensitive $domain_nodemgr_password    = lookup('domain_nodemgr_password', Sensitive),
 )
 {
   require ::profile::wls
@@ -187,7 +187,7 @@ class profile::wls::osb::domain(
     nodemanager_address => $profile::wls::nodemanager_address,
     nodemanager_port    => $profile::wls::nodemanager_port,
     weblogic_user       => $profile::wls::weblogic_user,
-    weblogic_password   => $profile::wls::weblogic_password,
+    weblogic_password   => $profile::wls::weblogic_password.unwrap,
     weblogic_home_dir   => $profile::wls::weblogic_home_dir,
     subscribe           => Wls_install::Domain[$domain_name],
   }
