@@ -68,3 +68,17 @@ profile::wls::admin_server_defaults:
 profile::wls::fmw_software::version:          12213
 profile::wls::fmw_software::filename:         fmw_12.2.1.3.0_osb.jar.zip
 profile::wls::fmw_software::product:          osb
+
+lookup_options:
+  domain_wls_password:
+    convert_to:
+      Sensitive
+  domain_nodemgr_password:
+    convert_to:
+      Sensitive
+  profile::wls::osb::domain::repository_password:
+    convert_to:
+      Sensitive
+  profile::wls::osb::domain::repository_sys_password:
+    convert_to:
+      Sensitive

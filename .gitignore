@@ -26,3 +26,5 @@ modules/timezone
 /domain_wlsonly.jar
 /domain_my_domain.jar
 /domain_osb.jar
+/modules/inifile
+/modules/translate
