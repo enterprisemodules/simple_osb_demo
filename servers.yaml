@@ -5,7 +5,7 @@
 defaults:
   domain_name:     example.com
   cpucount:         1
-  box:              enterprisemodules/centos-8.1-x86_64-nocm
+  box:              enterprisemodules/ol-7.7-x86_64-nocm
   virtualboxorafix: enable
 #
 # The default settings for all ML nodes
@@ -39,10 +39,10 @@ ml-rcudb:
 ml-osb1:
   public_ip:        '10.10.10.40'
   software_files:
-    # - jdk-8u161-linux-x64.tar.gz
-    # - fmw_12.2.1.3.0_infrastructure.jar
-    # - fmw_12.2.1.3.0_osb.jar.zip
-    # - jce_policy-8.zip
+    - jdk-8u161-linux-x64.tar.gz
+    - fmw_12.2.1.3.0_infrastructure.jar
+    - fmw_12.2.1.3.0_osb.jar.zip
+    - jce_policy-8.zip
 pe-osb1:
   public_ip:        '10.10.10.40'
   cpucount:         2
