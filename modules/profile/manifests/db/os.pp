@@ -12,7 +12,7 @@ class profile::db::os
 
   case ($::os['release']['major']) {
     '4','5','6': { $firewall_service = 'iptables'}
-    '7': { $firewall_service = 'firewalld' }
+    '7','8': { $firewall_service = 'firewalld' }
     default: { fail 'unsupported OS version when checking firewall service'}
   }
 
