@@ -1,4 +1,3 @@
-# This is an API class for the database classes
 class profile::db(
   $dbname,
   $base,

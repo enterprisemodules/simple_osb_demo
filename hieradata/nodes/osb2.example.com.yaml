@@ -1,5 +1,0 @@
----
-role: role::wls::server
-
-profile::wls::server::domain_name: osb
-domain_adminserver_address:        osb1.example.com
