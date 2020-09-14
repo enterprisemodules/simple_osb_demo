@@ -2,7 +2,6 @@ software/
 .vagrant
 .tmp
 .librarian
-modules/augeasproviders*
 modules/concat/
 modules/connect/
 modules/easy_type/
@@ -25,6 +24,13 @@ modules/timezone
 /.byebug_history
 /domain_wlsonly.jar
 /domain_my_domain.jar
-/domain_osb.jar
-/modules/inifile
-/modules/translate
+/domain_soa.jar
+/modules/augeasproviders
+/modules/augeasproviders_core
+/modules/augeasproviders_sysctl
+/modules/wls_profile
+/modules/echo
+/modules/firewalld
+/modules/ora_profile
+/modules/java
+screenlog.0
