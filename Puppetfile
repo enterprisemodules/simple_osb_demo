@@ -20,6 +20,7 @@ mod 'stm-debconf'
 mod 'crayfishx-firewalld'
 mod 'puppetlabs-concat'
 mod 'petems-swap_file'
+mod 'puppet-systemd'
 #
 # Modules that are part of the control repo. R10K doesn't need to touch these
 #
