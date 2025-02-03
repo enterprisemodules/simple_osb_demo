@@ -11,7 +11,9 @@ mod 'puppet-augeasproviders_core'
 mod 'herculesteam-augeasproviders_grub'
 mod 'herculesteam-augeasproviders_sysctl'
 mod 'saz-limits'
-mod 'puppetlabs-java'
+mod 'java',
+  :git => 'https://github.com/enterprisemodules/puppetlabs-java.git',
+  :branch => 'main'
 mod 'puppet-archive'
 mod 'fiddyspence-sleep'
 mod 'saz-timezone'
