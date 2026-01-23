@@ -1,7 +1,10 @@
 ---
-#
-# generic WLS settings
-#
+# Installation type
+wls_profile::domain_name:                                           osb
+wls_profile::install_type:                                          osb
+wls_profile::basic_domain::wls_domain::template_name:               osb
+
+# RCU DB settings
 wls_profile::basic_domain::wls_domain::repository_database_url:     'jdbc:oracle:thin:@//rcudb.example.com:1521/rcudb.example.com'
 wls_profile::basic_domain::wls_domain::rcu_database_url:            'rcudb.example.com:1521:rcudb.example.com'
 
