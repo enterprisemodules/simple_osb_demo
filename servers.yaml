@@ -26,7 +26,7 @@ pe-puppetserver:
 #
 rcudb:
   software_files:
-    - linuxx64_12201_database.zip
+    - LINUX.X64_193000_db_home.zip
 
 osb12213n1:
   software_files:
@@ -55,4 +55,3 @@ osb12214n2:
     - fmw_12.2.1.4.0_infrastructure.jar
     - fmw_12.2.1.4.0_osb.jar.zip
     - jce_policy-8.zip
-    

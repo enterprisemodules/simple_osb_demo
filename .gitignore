@@ -27,10 +27,12 @@ modules/timezone
 /domain_soa.jar
 /modules/augeasproviders
 /modules/augeasproviders_core
+/modules/augeasproviders_grub
 /modules/augeasproviders_sysctl
 /modules/wls_profile
 /modules/echo
 /modules/firewalld
 /modules/ora_profile
 /modules/java
+/modules/systemd
 screenlog.0
